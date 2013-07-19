@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>短信</title>
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/index2.js"></script>
+</head>
+<body>
+<div id="page"></div>
+<input type="hidden" id="requestUrl" value="http://ops.airizu.com/airizuInfonew/TSms/list?max=10&offset="/>
+<script type="text/templete" id="tableTemplete">
+    <table>
+        <thead>
+        <tr>
+
+            <th class="sortable">Id</th>
+
+            <th class="sortable">Date Created</th>
+
+            <th class="sortable">Error Code</th>
+
+            <th class="sortable">Message</th>
+
+            <th class="sortable">Phone</th>
+
+            <th class="sortable">Url</th>
+
+        </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</script>
+</body>
+</html>
