@@ -9,3 +9,6 @@ fetch data on  page
   * EventProxy-异步并发
   * chrome的跨域请求
   * bootstarp
+  
+  
+http://ops.airizu.com
