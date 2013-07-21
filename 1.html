@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title>预定</title>
+    <script type="text/javascript" src="js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+<body>
+<div id="page"></div>
+
+<input type="hidden" id="requestUrl" value="http://ops.airizu.com/airizuInfonew/TBookRoom/list/aForm?offset="/>
+<script type="text/templete" id="tableTemplete">
+    <table border="0" cellpadding="0" cellspacing="0" style="width:4864px">
+        <thead>
+        <tr>
+            <td style="height:19px; width:64px">&nbsp;</td>
+            <td style="width:64px">&nbsp;</td>
+            <td style="width:64px">&nbsp;</td>
+            <td style="width:91px">&nbsp;</td>
+            <td style="width:64px">&nbsp;</td>
+            <td colspan="9" style="width:576px">订单信息</td>
+            <td colspan="6" style="width:424px">租客信息</td>
+            <td colspan="10" style="width:604px">房东信息</td>
+            <td colspan="7" style="width:512px">销售信息</td>
+            <td style="width:91px">&nbsp;</td>
+            <td style="width:52px">&nbsp;</td>
+            <td style="width:91px">&nbsp;</td>
+            <td style="width:91px">&nbsp;</td>
+            <td style="width:64px">&nbsp;</td>
+            <td colspan="17" style="width:1923px">付款信息</td>
+            <td style="width:91px">&nbsp;</td>
+        </tr>
+        <tr>
+            <td style="height:19px">订单编号</td>
+            <td>订单状态</td>
+            <td>订单来源</td>
+            <td>状态变更时间</td>
+            <td>付款状态</td>
+            <td>预定时间</td>
+            <td>入住日期</td>
+            <td>退房日期</td>
+            <td>入住天数</td>
+            <td>入住人数</td>
+            <td>预定间数</td>
+            <td>房间编号</td>
+            <td>入住城市</td>
+            <td>房间备注</td>
+            <td>租客姓名</td>
+            <td>租客号码</td>
+            <td>房客归属地</td>
+            <td>租客邮箱</td>
+            <td>入住人姓名</td>
+            <td>入住人号码</td>
+            <td>房东姓名</td>
+            <td>&nbsp;</td>
+            <td>号码1归属地</td>
+            <td>房东号码2</td>
+            <td>号码2归属地</td>
+            <td>其他房源数</td>
+            <td>CM</td>
+            <td>AE</td>
+            <td>QQ</td>
+            <td>其他联系人</td>
+            <td>客户销售</td>
+            <td>追款销售</td>
+            <td>CTPD跟单状态</td>
+            <td>取消原因</td>
+            <td>取消记录</td>
+            <td>订房目的</td>
+            <td>短信确认/拒绝</td>
+            <td>租客销售备注</td>
+            <td>AE备注</td>
+            <td>电话客户备注</td>
+            <td>是否引起投诉</td>
+            <td>投诉类型</td>
+            <td>房费总计（租客）折前</td>
+            <td>周租月租折前金额</td>
+            <td>房费总计（租客）折后</td>
+            <td>租客折扣金额</td>
+            <td>周租月租优惠金额</td>
+            <td>订单原始订金</td>
+            <td>租客应支付订金</td>
+            <td>积分冲抵金额</td>
+            <td>现金券抵减金额</td>
+            <td>租客支付定金</td>
+            <td>资金账户支付</td>
+            <td>爱日租支付租客</td>
+            <td>订单总额（房东）</td>
+            <td>平均每晚价格（房东）</td>
+            <td>租客入住时应支付房东</td>
+            <td>爱日租支付房东</td>
+            <td>周租月租佣金</td>
+            <td>订单修改原因</td>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</script>
+</body>
+</html>
