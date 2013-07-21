@@ -4,7 +4,24 @@ $(function () {
     var clearbtn = $('<button>', {'html': '清空', 'class': "btn"});
     var upbtn = $('<button>', {'html': '收起15秒', 'class': "btn"});
 
+    var exportExcel = $('<button>', {'html': '另存为html(需手动设置)', 'class': "btn"});
+
     var pauseValue = 0;//暂停按钮
+
+    var page = $('#page'), tmpCache = $("<div>");
+    var table = $($("#tableTemplete").html());
+
+    var proBar = '<p></p><div class="progress-bar blue stripes"><span></span></div>';
+    var progress = $("<div>", {id: 'progress', html: proBar});
+
+
+    exportExcel.click(function () {
+        var tableHTML = '<table border="1">' + table.html().replace(/[\t\r\n ]{2,}|[\t\r\n]/g, '') + '</table>';
+        var bb = new Blob([ tableHTML ], { type: "text/csv;base64" });
+        var bburl = window.webkitURL.createObjectURL(bb);
+        window.open(bburl);
+//        document.location.href = bburl;
+    });
 
     upbtn.click(function () {
         progress.slideUp();
@@ -29,16 +46,10 @@ $(function () {
 
     });
 
-
-    var page = $('#page'), tmpCache = $("<div>");
-    var table = $($("#tableTemplete").html());
-
-    var proBar = '<p></p><div class="progress-bar blue stripes"><span></span></div>';
-    var progress = $("<div>", {id: 'progress', html: proBar});
-
     progress.append(pausebtn);
     progress.append(clearbtn);
     progress.append(upbtn);
+    progress.append(exportExcel);
 
     page.append('<link rel="stylesheet" href="css/main.css"/>');
 
@@ -48,8 +59,8 @@ $(function () {
 
 
     //页数范围
-    var startPage=(localStorage.getItem('startPage')|| 0)-0,
-        endPage=(localStorage.getItem('endPage')|| 0)-0;
+    var startPage = (localStorage.getItem('startPage') || 0) - 0,
+        endPage = (localStorage.getItem('endPage') || 0) - 0;
 
     var totalPage = endPage,
         curPage = startPage;

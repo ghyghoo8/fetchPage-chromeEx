@@ -4,7 +4,7 @@
     },
     "name": "fetchPage",
     "manifest_version": 2,
-    "version": "1.0",
+    "version": "1.1",
     "description": "fetch data on page",
     "browser_action": {
         "default_icon": "icon.png",

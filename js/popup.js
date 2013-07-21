@@ -10,7 +10,7 @@ $(function () {
     });
 
 
-    //½ø³ÌÊýÉèÖÃ
+    //è¿›ç¨‹æ•°è®¾ç½®
     var curPro = $("#curPro");
     curPro.html((localStorage.getItem('proNumber') || 10));
 
@@ -19,7 +19,7 @@ $(function () {
         curPro.html($("#proNumber").val() || 10);
     });
 
-    //Ò³Êý·¶Î§
+    //é¡µæ•°èŒƒå›´
     var startPage = $("#startPage"),
         endPage = $("#endPage");
 
