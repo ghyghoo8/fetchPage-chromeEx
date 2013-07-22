@@ -179,6 +179,9 @@ function getT1Data(t1) {
 function getT2Data(t2) {
     var tables = [];
     $('table.t3', t2).each(function (index, item) {
+
+        if (index)return true;
+
         var arr = getT3Data(this, index);
         if ($.isArray(arr)) {
             tables = tables.concat(arr);
@@ -263,8 +266,14 @@ function getNumByReg(str) {
 var T3Functon = {
     t30: function (item) {
         $('tr', item).each(function (index) {
+
             var td = this.getElementsByTagName('td')[0],
                 $tr = $(this);
+
+            if(index){
+                $tr.remove();
+                return true;
+            }
 
             if (index == 1 && $('.data', $tr).length == 0) {
                 $tr.remove();
